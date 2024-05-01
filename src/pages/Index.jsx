@@ -46,6 +46,9 @@ const Index = () => {
       <Heading as="h1" size="xl" textAlign="center" my={10}>
         Welcome to Our Clothing Store
       </Heading>
+      <Heading as="h2" size="lg" textAlign="center" my={5}>
+        Popular Products
+      </Heading>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
         {products.map((product) => (
           <Box key={product.id} p={5} shadow="md" borderWidth="1px">
