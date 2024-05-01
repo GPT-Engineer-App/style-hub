@@ -67,6 +67,19 @@ const Index = () => {
       <Heading as="h2" size="lg" textAlign="center" my={5}>
         Popular Products
       </Heading>
+      {}
+      <Box my={5}>
+        <Image src="https://example.com/image1.jpg" />
+        <Image src="https://example.com/image2.jpg" />
+        <Image src="https://example.com/image3.jpg" />
+      </Box>
+      {}
+      <Box as="aside" p={5} shadow="md" borderWidth="1px" position="absolute" left="0" top="100px">
+        <Text fontSize="lg" fontWeight="bold">
+          Search Filters
+        </Text>
+        {}
+      </Box>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
         {products.map((product) => (
           <Box key={product.id} p={5} shadow="md" borderWidth="1px">
@@ -81,9 +94,6 @@ const Index = () => {
               </Button>
               <Button colorScheme="pink" variant="ghost" onClick={() => alert("Liked!")}>
                 <FaHeart />
-              </Button>
-              <Button colorScheme="blue" variant="ghost" onClick={() => alert("Search coming soon!")}>
-                <FaSearch />
               </Button>
             </Flex>
           </Box>
