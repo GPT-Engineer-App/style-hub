@@ -38,6 +38,24 @@ const products = [
     price: "$24.99",
     image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxzdW5nbGFzc2VzfGVufDB8fHx8MTcxNDU5Mjk0OHww&ixlib=rb-4.0.3&q=80&w=1080",
   },
+  {
+    id: 7,
+    name: "Leather Wallet",
+    price: "$34.99",
+    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 8,
+    name: "Elegant Watch",
+    price: "$78.99",
+    image: "https://images.unsplash.com/photo-1576675784201-0e142b423952?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 9,
+    name: "Stylish Hat",
+    price: "$25.99",
+    image: "https://images.unsplash.com/photo-1523480717984-b1e3f5a0c5a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  },
 ];
 
 const Index = () => {
@@ -58,13 +76,13 @@ const Index = () => {
               <Text>{product.price}</Text>
             </Flex>
             <Flex align="center" mt={2} justifyContent="space-between">
-              <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="outline">
+              <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="outline" onClick={() => alert("Added to cart!")}>
                 Add to Cart
               </Button>
-              <Button colorScheme="pink" variant="ghost">
+              <Button colorScheme="pink" variant="ghost" onClick={() => alert("Liked!")}>
                 <FaHeart />
               </Button>
-              <Button colorScheme="blue" variant="ghost">
+              <Button colorScheme="blue" variant="ghost" onClick={() => alert("Search coming soon!")}>
                 <FaSearch />
               </Button>
             </Flex>

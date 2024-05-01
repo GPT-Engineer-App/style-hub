@@ -14,13 +14,13 @@ const ProductDetails = ({ products }) => {
         <Text>{product.price}</Text>
       </Flex>
       <Flex align="center" mt={2} justifyContent="space-between">
-        <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="outline">
+        <Button leftIcon={<FaShoppingCart />} colorScheme="teal" variant="outline" onClick={() => alert("Added to cart!")}>
           Add to Cart
         </Button>
-        <Button colorScheme="pink" variant="ghost">
+        <Button colorScheme="pink" variant="ghost" onClick={() => alert("Liked!")}>
           <FaHeart />
         </Button>
-        <Button colorScheme="blue" variant="ghost">
+        <Button colorScheme="blue" variant="ghost" onClick={() => alert("Search coming soon!")}>
           <FaSearch />
         </Button>
       </Flex>
